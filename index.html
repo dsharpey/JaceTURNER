@@ -4,260 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Is Your Weapon | Jace Turner</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
-            background-color: #0a0a0a; /* Almost Black */
-            color: #ffffff; /* White */
+            background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+            color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 120px 20px;
+        }
+
+        .hero {
             text-align: center;
+            margin-bottom: 80px;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 56px;
             margin-bottom: 20px;
-            color: #b71c1c; /* Deep Crimson */
+            font-weight: 700;
+            line-height: 1.2;
         }
 
         h2 {
-            font-size: 1.5rem;
-            color: #e5e5e5; /* Platinum */
-            margin-bottom: 40px;
-        }
-
-        .stats, .content, .solution, .learn {
-            margin: 40px 0;
-            padding: 20px;
-            background-color: #2d2d2d; /* Charcoal */
-            border-radius: 10px;
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 60px;
+            font-weight: 400;
+            opacity: 0.9;
         }
 
         .stats {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            margin: 80px 0;
+            text-align: center;
+            gap: 40px;
         }
 
-        .stat h3 {
-            font-size: 2rem;
-            color: #b71c1c; /* Deep Crimson */
-            margin: 0;
+        .stat {
+            flex: 1;
         }
 
-        .stat p {
-            margin: 5px 0;
-            color: #e5e5e5; /* Platinum */
+        .stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
-        .content p, .solution p, .learn p {
-            font-size: 1.2rem;
-            margin: 10px 0;
+        .content-section {
+            margin: 60px 0;
+            font-size: 28px;
+            line-height: 1.5;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .content-section p {
+            margin: 25px 0;
+        }
+
+        .list {
+            margin: 40px 0;
+        }
+
+        .list-item {
+            font-size: 24px;
             margin: 20px 0;
+            padding-left: 40px;
+            position: relative;
         }
 
-        li {
-            margin: 10px 0;
-            font-size: 1.1rem;
-            color: #ffffff; /* White */
+        .list-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
         }
 
         .cta-button {
-            background-color: #b71c1c; /* Deep Crimson */
-            color: #ffffff; /* White */
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            display: inline-block;
+            background: linear-gradient(90deg, #ffffff 0%, #e5e5e5 100%);
+            color: #000000;
+            padding: 20px 50px;
+            font-size: 24px;
             text-decoration: none;
+            border-radius: 8px;
+            margin: 60px 0;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+            font-weight: 600;
         }
 
         .cta-button:hover {
-            background-color: #8f1616; /* Darker Crimson */
+            transform: translateY(-2px);
         }
 
         .footer {
-            margin-top: 40px;
-            color: #e5e5e5; /* Platinum */
+            text-align: center;
+            margin-top: 100px;
+            color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .modal-content {
-            background-color: #0a0a0a; /* Almost Black */
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #e5e5e5; /* Platinum */
-            width: 80%;
-            max-width: 700px;
-            border-radius: 10px;
-        }
-
-        .close-button {
-            color: #ffffff; /* White */
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close-button:hover,
-        .close-button:focus {
-            color: #b71c1c; /* Deep Crimson */
+        .footer a {
+            color: #ffffff;
             text-decoration: none;
-            cursor: pointer;
+            margin: 0 15px;
+            transition: opacity 0.3s;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 60px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
             .stats {
                 flex-direction: column;
-                gap: 20px;
             }
-            
-            h1 {
-                font-size: 2rem;
+
+            .stat {
+                margin: 20px 0;
             }
-            
-            h2 {
-                font-size: 1.2rem;
+
+            .content-section {
+                font-size: 22px;
+            }
+
+            .list-item {
+                font-size: 20px;
+            }
+
+            .cta-button {
+                font-size: 20px;
+                padding: 15px 40px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Hero Section -->
-        <h1>Time Is Your Weapon: The Guide to Unstoppable Discipline</h1>
-        <h2>A No-BS Guide to Building an Unshakeable Mind & Body</h2>
-        <button class="cta-button" id="openModal">Get Your Free Copy</button>
+        <div class="hero">
+            <h1>Time Is Your Weapon: The Guide to Unstoppable Discipline</h1>
+            <h2>A No-BS Guide to Building an Unshakeable Mind & Body</h2>
+        </div>
 
-        <!-- If You're Tired Of Section -->
-        <div class="content">
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">3.5K+</div>
+                <p>Subscribers Strong</p>
+            </div>
+            <div class="stat">
+                <div class="stat-number">26+</div>
+                <p>Value-Packed Videos</p>
+            </div>
+            <div class="stat">
+                <div class="stat-number">500+</div>
+                <p>Growing Community</p>
+            </div>
+        </div>
+
+        <div class="content-section">
             <h2>If You're Tired Of...</h2>
-            <ul>
-                <li>Starting over every Monday</li>
-                <li>Motivation videos that lead nowhere</li>
-                <li>Feeling stuck while time passes by</li>
-            </ul>
+            <div class="list">
+                <div class="list-item">🔄 Starting over every Monday</div>
+                <div class="list-item">📱 Motivation videos that lead nowhere</div>
+                <div class="list-item">⏰ Feeling stuck while time passes by</div>
+            </div>
         </div>
 
-        <!-- Problem Section -->
-        <div class="content">
+        <div class="content-section">
             <h2>Sound Familiar?</h2>
-            <ul>
-                <li>Struggling to maintain discipline</li>
-                <li>Lacking a clear path to success</li>
-                <li>Feeling overwhelmed by distractions</li>
-            </ul>
+            <div class="list">
+                <div class="list-item">😤 Struggling to maintain discipline</div>
+                <div class="list-item">🌫️ Lacking a clear path to success</div>
+                <div class="list-item">📵 Feeling overwhelmed by distractions</div>
+            </div>
         </div>
 
-        <!-- Solution Section -->
-        <div class="solution">
+        <div class="content-section">
             <h2>Time Is Your Weapon: Your Path to Real Change</h2>
             <p>This isn't another motivational guide. It's a battle-tested system for building unstoppable discipline, real physical strength, and an unshakeable mindset.</p>
         </div>
 
-        <!-- Who This Is For Section -->
-        <div class="content">
+        <div class="content-section">
             <h2>Who This Guide Is For:</h2>
-            <ul>
-                <li>Young men ready to take control of their lives</li>
-                <li>Anyone seeking real, lasting transformation</li>
-                <li>Individuals tired of temporary fixes</li>
-            </ul>
-        </div>
-
-        <!-- What You'll Learn Section -->
-        <div class="learn">
-            <h2>Inside This Guide, You'll Discover:</h2>
-            <ul>
-                <li>How to weaponize time for maximum results</li>
-                <li>The exact morning routine that guarantees success</li>
-                <li>Systems that make success automatic</li>
-            </ul>
-        </div>
-
-        <!-- Call to Action Section -->
-        <h2>Ready to Transform Your Life?</h2>
-        <button class="cta-button" id="openModal">Download Your Free Guide Now</button>
-
-        <!-- Modal for Form -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close-button" id="closeModal">&times;</span>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform?embedded=true" 
-                    width="640" 
-                    height="600" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0">
-                    Loading…
-                </iframe>
+            <div class="list">
+                <div class="list-item">💪 Young men ready to take control of their lives</div>
+                <div class="list-item">🎯 Anyone seeking real, lasting transformation</div>
+                <div class="list-item">⚡ Individuals tired of temporary fixes</div>
             </div>
         </div>
 
-        <!-- Footer Section -->
-        <p class="footer">Join the growing community of men who are done with excuses and ready for real change.</p>
+        <div class="content-section">
+            <h2>Inside This Guide, You'll Discover:</h2>
+            <div class="list">
+                <div class="list-item">⚔️ How to weaponize time for maximum results</div>
+                <div class="list-item">🌅 The exact morning routine that guarantees success</div>
+                <div class="list-item">🔄 Systems that make success automatic</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="cta-button" id="openModal">Get Your Free Copy Now</button>
+        </div>
+
         <div class="footer">
-            <a href="https://www.youtube.com/@Jace_Turner" target="_blank">YouTube</a> | 
-            <a href="https://www.instagram.com/jaceturner_coaching" target="_blank">Instagram</a>
+            <p>Join the growing community of men who are done with excuses and ready for real change.</p>
+            <div>
+                <a href="https://www.youtube.com/@Jace_Turner" target="_blank">YouTube</a> | 
+                <a href="https://www.instagram.com/jaceturner_coaching" target="_blank">Instagram</a>
+            </div>
         </div>
     </div>
 
-    <!-- JavaScript for smooth scrolling and modal -->
     <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Modal functionality
-        const modal = document.getElementById('modal');
-        const openModalButtons = document.querySelectorAll('#openModal');
-        const closeModalButton = document.getElementById('closeModal');
-
-        openModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                modal.style.display = 'block';
-            });
-        });
-
-        closeModalButton.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
+        document.getElementById('openModal').addEventListener('click', function() {
+            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform';
         });
     </script>
 </body>
