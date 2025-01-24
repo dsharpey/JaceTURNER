@@ -1,6 +1,8 @@
+
 :root {
     --primary: #b71c1c;      /* Deep Crimson */
     --secondary: #2d2d2d;    /* Charcoal */
+    --accent: #e5e5e5;       /* Platinum */
     --text: #ffffff;         /* White */
     --background: #0a0a0a;   /* Almost Black */
 }
@@ -11,22 +13,23 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    line-height: 1.6;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 40px 20px;
+    text-align: center;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: var(--primary);
     margin-bottom: 40px;
 }
@@ -35,21 +38,55 @@ h2 {
     display: flex;
     justify-content: space-around;
     margin: 40px 0;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: 10px;
 }
 
 .stat h3 {
-    font-size: 2em;
+    font-size: 2rem;
     color: var(--primary);
     margin: 0;
 }
 
 .stat p {
     margin: 5px 0;
+    color: var(--accent);
+}
+
+.content {
+    text-align: left;
+    margin: 40px 0;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.solution, .learn {
+    margin: 30px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 1.1rem;
 }
 
 iframe {
     max-width: 100%;
     margin-top: 40px;
+}
+
+.footer {
+    margin-top: 40px;
+    color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -59,11 +96,11 @@ iframe {
     }
     
     h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
     
     h2 {
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
 }
 
@@ -95,6 +132,37 @@ iframe {
             </div>
         </div>
 
+        <div class="content">
+            <p>You've tried to change before.</p>
+            <p>Monday comes, you're motivated.</p>
+            <p>By Wednesday, you're back to your old habits.</p>
+            <p>The cycle continues...</p>
+
+            <div class="solution">
+                <p>The Lock-In Method isn't another motivational guide.</p>
+                <p>It's a battle-tested system for building:</p>
+                <ul>
+                    <li>Unstoppable Discipline</li>
+                    <li>Real Physical Strength</li>
+                    <li>Unshakeable Mindset</li>
+                    <li>Time Mastery</li>
+                    <li>Lasting Habits</li>
+                </ul>
+            </div>
+
+            <div class="learn">
+                <p>You'll Learn:</p>
+                <ul>
+                    <li>→ Why your past attempts at change have failed</li>
+                    <li>→ How to weaponize time for maximum results</li>
+                    <li>→ The exact morning routine that guarantees success</li>
+                    <li>→ How to build real confidence through action</li>
+                    <li>→ The foundation of lasting physical transformation</li>
+                    <li>→ Systems that make success automatic</li>
+                </ul>
+            </div>
+        </div>
+
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform?embedded=true" 
             width="640" 
             height="600" 
@@ -103,6 +171,8 @@ iframe {
             marginwidth="0">
             Loading…
         </iframe>
+
+        <p class="footer">Join the growing community of men who are done with excuses and ready for real change.</p>
     </div>
 </body>
 </html>
