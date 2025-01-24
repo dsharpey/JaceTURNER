@@ -1,313 +1,70 @@
-/* Root Variables */
 :root {
     --primary: #b71c1c;      /* Deep Crimson */
     --secondary: #2d2d2d;    /* Charcoal */
-    --accent: #e5e5e5;       /* Platinum */
     --text: #ffffff;         /* White */
     --background: #0a0a0a;   /* Almost Black */
-    --highlights: #f5f5f5;   /* Light Gray */
-}
-
-/* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     background-color: var(--background);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-}
-
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navigation */
-.nav {
-    background-color: var(--background);
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    color: var(--text);
-    font-size: 24px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    padding: 160px 0 80px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
-.hero-title {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.2;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.hero-subtitle {
-    font-size: 24px;
-    color: var(--accent);
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: var(--primary);
     margin-bottom: 40px;
 }
 
-/* Stats Section */
 .stats {
-    background-color: var(--secondary);
-    padding: 80px 0;
-}
-
-.stats-container {
     display: flex;
     justify-content: space-around;
-    text-align: center;
+    margin: 40px 0;
 }
 
-.stat-item {
-    flex: 1;
-    padding: 20px;
-}
-
-.stat-number {
-    font-size: 36px;
-    font-weight: 700;
+.stat h3 {
+    font-size: 2em;
     color: var(--primary);
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-.stat-text {
-    color: var(--accent);
-    font-size: 18px;
+.stat p {
+    margin: 5px 0;
 }
 
-/* Features Section */
-.features {
-    padding: 80px 0;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+iframe {
+    max-width: 100%;
     margin-top: 40px;
 }
 
-.feature-card {
-    background-color: var(--secondary);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.feature-title {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: var(--primary);
-}
-
-/* Form Section */
-.form-section {
-    padding: 80px 0;
-    background-color: var(--secondary);
-}
-
-.form-container {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 24px;
-    background-color: var(--background);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.form-header {
-    border-top: 10px solid var(--primary);
-    border-radius: 8px 8px 0 0;
-    padding: 24px;
-}
-
-.form-title {
-    font-size: 32px;
-    font-weight: 400;
-    margin: 0;
-    line-height: 40px;
-}
-
-.form-field {
-    padding: 24px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-}
-
-.field-label {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.field-input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-    background-color: var(--secondary);
-    color: var(--text);
-    font-size: 14px;
-}
-
-.submit-button {
-    background-color: var(--primary);
-    color: var(--text);
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.submit-button:hover {
-    background-color: #8f1616;
-}
-
-/* Footer */
-.footer {
-    background-color: var(--secondary);
-    padding: 40px 0;
-    text-align: center;
-}
-
-.footer-text {
-    color: var(--accent);
-    font-size: 14px;
-}
-
-/* Utility Classes */
-.text-primary {
-    color: var(--primary);
-}
-
-.text-accent {
-    color: var(--accent);
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 36px;
-    }
-    
-    .hero-subtitle {
-        font-size: 20px;
-    }
-    
-    .stats-container {
+    .stats {
         flex-direction: column;
+        gap: 20px;
     }
     
-    .stat-item {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 28px;
+    h1 {
+        font-size: 2em;
     }
     
-    .container {
-        padding: 0 15px;
+    h2 {
+        font-size: 1.2em;
     }
-}
-/* Additional styles for JavaScript functionality */
-
-/* Sticky Nav */
-.nav-scrolled {
-    background-color: rgba(10, 10, 10, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-/* Cookie Consent */
-.cookie-consent {
-    position: fixed;
-    bottom: -100px;
-    left: 0;
-    right: 0;
-    background-color: var(--secondary);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    transition: bottom 0.3s ease;
-    z-index: 1000;
-}
-
-.cookie-consent.active {
-    bottom: 0;
-}
-
-.cookie-accept {
-    background-color: var(--primary);
-    color: var(--text);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.cookie-accept:hover {
-    background-color: #8f1616;
-}
-
-/* Loading Animation */
-.loading {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 3px solid rgba(255,255,255,.3);
-    border-radius: 50%;
-    border-top-color: var(--primary);
-    animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Fade In Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 <!DOCTYPE html>
@@ -317,129 +74,36 @@ body {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Lock-In Method | Jace Turner</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container nav-container">
-            <a href="#" class="nav-logo">JACE TURNER</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">The Lock-In Method</h1>
-            <p class="hero-subtitle">A No-BS Guide to Transforming Your Mind & Body</p>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container stats-container">
-            <div class="stat-item">
-                <div class="stat-number">3.5K+</div>
-                <div class="stat-text">Subscribers Strong</div>
+    <div class="container">
+        <h1>Transform Your Life With The Lock-In Method</h1>
+        <h2>A No-BS Guide to Building an Unshakeable Mind & Body</h2>
+        
+        <div class="stats">
+            <div class="stat">
+                <h3>3.5K+</h3>
+                <p>Subscribers Strong</p>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">26+</div>
-                <div class="stat-text">Value-Packed Videos</div>
+            <div class="stat">
+                <h3>26+</h3>
+                <p>Value-Packed Videos</p>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-text">Growing Community</div>
+            <div class="stat">
+                <h3>500+</h3>
+                <p>Growing Community</p>
             </div>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3 class="feature-title">Real Transformation</h3>
-                    <p>Stop starting over every Monday. Learn the exact system for lasting change.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 class="feature-title">Proven System</h3>
-                    <p>No motivation BS. Just practical strategies that actually work.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 class="feature-title">Complete Guide</h3>
-                    <p>Everything you need to transform your mind and body.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section class="form-section">
-        <div class="container">
-            <div class="form-container">
-                <div class="form-header">
-                    <h2 class="form-title">Get Your Free Copy Now</h2>
-                </div>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform?embedded=true" 
-                        width="100%" 
-                        height="600" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0">
-                    Loading…
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-text">Join the growing community of men who are done with excuses and ready for real change.</p>
-        </div>
-    </footer>
-
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform?embedded=true" 
+            width="640" 
+            height="600" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">
+            Loading…
+        </iframe>
+    </div>
 </body>
 </html>
 
-// main.js
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Sticky Navigation
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.nav');
-    if (window.scrollY > 50) {
-        nav.classList.add('nav-scrolled');
-    } else {
-        nav.classList.remove('nav-scrolled');
-    }
-});
-
-// Cookie Consent
-const cookieConsent = document.querySelector('.cookie-consent');
-const cookieAccept = document.querySelector('.cookie-accept');
-
-if (!localStorage.getItem('cookieConsent')) {
-    cookieConsent.classList.add('active');
-}
-
-cookieAccept.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'true');
-    cookieConsent.classList.remove('active');
-});
-
-// Form iframe height adjustment
-window.addEventListener('message', function(e) {
-    if (e.data.type === 'setHeight') {
-        document.querySelector('iframe').style.height = e.data.height + 'px';
-    }
-});
