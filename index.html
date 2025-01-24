@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
-            background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+            background-color: #0a0a0a;
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -32,14 +32,14 @@
             margin-bottom: 20px;
             font-weight: 700;
             line-height: 1.2;
+            color: #b71c1c;
         }
 
         h2 {
             font-size: 28px;
             color: #ffffff;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
             font-weight: 400;
-            opacity: 0.9;
         }
 
         .stats {
@@ -58,39 +58,34 @@
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 10px;
+            color: #b71c1c;
+        }
+
+        .stat p {
+            color: #e5e5e5;
+        }
+
+        .container-dark {
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0 40px 0;
         }
 
         .content-section {
             margin: 60px 0;
-            font-size: 28px;
-            line-height: 1.5;
-        }
-
-        .content-section p {
-            margin: 25px 0;
-        }
-
-        .list {
-            margin: 40px 0;
         }
 
         .list-item {
             font-size: 24px;
             margin: 20px 0;
-            padding-left: 40px;
-            position: relative;
-        }
-
-        .list-item:before {
-            content: "";
-            position: absolute;
-            left: 0;
+            color: #e5e5e5;
         }
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(90deg, #ffffff 0%, #e5e5e5 100%);
-            color: #000000;
+            background-color: #b71c1c;
+            color: #ffffff;
             padding: 20px 50px;
             font-size: 24px;
             text-decoration: none;
@@ -103,17 +98,18 @@
         }
 
         .cta-button:hover {
+            background-color: #8f1616;
             transform: translateY(-2px);
         }
 
         .footer {
             text-align: center;
             margin-top: 100px;
-            color: rgba(255, 255, 255, 0.7);
+            color: #e5e5e5;
         }
 
         .footer a {
-            color: #ffffff;
+            color: #b71c1c;
             text-decoration: none;
             margin: 0 15px;
             transition: opacity 0.3s;
@@ -144,10 +140,6 @@
                 margin: 20px 0;
             }
 
-            .content-section {
-                font-size: 22px;
-            }
-
             .list-item {
                 font-size: 20px;
             }
@@ -155,6 +147,11 @@
             .cta-button {
                 font-size: 20px;
                 padding: 15px 40px;
+                width: 100%;
+            }
+
+            .container-dark {
+                padding: 20px;
             }
         }
     </style>
@@ -166,9 +163,24 @@
             <h2>A No-BS Guide to Building an Unshakeable Mind & Body</h2>
         </div>
 
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">3.5K+</div>
+                <p>Subscribers Strong</p>
+            </div>
+            <div class="stat">
+                <div class="stat-number">26+</div>
+                <p>Value-Packed Videos</p>
+            </div>
+            <div class="stat">
+                <div class="stat-number">500+</div>
+                <p>Growing Community</p>
+            </div>
+        </div>
+
         <div class="content-section">
             <h2>If You're Tired Of...</h2>
-            <div class="list">
+            <div class="container-dark">
                 <div class="list-item">🔄 Starting over every Monday</div>
                 <div class="list-item">📱 Motivation videos that lead nowhere</div>
                 <div class="list-item">⏰ Feeling stuck while time passes by</div>
@@ -177,7 +189,7 @@
 
         <div class="content-section">
             <h2>Sound Familiar?</h2>
-            <div class="list">
+            <div class="container-dark">
                 <div class="list-item">😤 Struggling to maintain discipline</div>
                 <div class="list-item">🌫️ Lacking a clear path to success</div>
                 <div class="list-item">📵 Feeling overwhelmed by distractions</div>
@@ -186,12 +198,14 @@
 
         <div class="content-section">
             <h2>Time Is Your Weapon: Your Path to Real Change</h2>
-            <p>This isn't another motivational guide. It's a battle-tested system for building unstoppable discipline, real physical strength, and an unshakeable mindset.</p>
+            <div class="container-dark">
+                <div class="list-item">This isn't another motivational guide. It's a battle-tested system for building unstoppable discipline, real physical strength, and an unshakeable mindset.</div>
+            </div>
         </div>
 
         <div class="content-section">
             <h2>Who This Guide Is For:</h2>
-            <div class="list">
+            <div class="container-dark">
                 <div class="list-item">💪 Young men ready to take control of their lives</div>
                 <div class="list-item">🎯 Anyone seeking real, lasting transformation</div>
                 <div class="list-item">⚡ Individuals tired of temporary fixes</div>
@@ -200,7 +214,7 @@
 
         <div class="content-section">
             <h2>Inside This Guide, You'll Discover:</h2>
-            <div class="list">
+            <div class="container-dark">
                 <div class="list-item">⚔️ How to weaponize time for maximum results</div>
                 <div class="list-item">🌅 The exact morning routine that guarantees success</div>
                 <div class="list-item">🔄 Systems that make success automatic</div>
