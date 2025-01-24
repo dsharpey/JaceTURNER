@@ -5,147 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Is Your Weapon | Jace Turner</title>
     <style>
-body {
-    background-color: #0a0a0a; /* Almost Black */
-    color: #ffffff; /* White */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
+        body {
+            background-color: #0a0a0a; /* Almost Black */
+            color: #ffffff; /* White */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #b71c1c; /* Deep Crimson */
-}
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #b71c1c; /* Deep Crimson */
+        }
 
-h2 {
-    font-size: 1.5rem;
-    color: #e5e5e5; /* Platinum */
-    margin-bottom: 40px;
-}
+        h2 {
+            font-size: 1.5rem;
+            color: #e5e5e5; /* Platinum */
+            margin-bottom: 40px;
+        }
 
-.stats, .content, .solution, .learn {
-    margin: 40px 0;
-    padding: 20px;
-    background-color: #2d2d2d; /* Charcoal */
-    border-radius: 10px;
-}
+        .stats, .content, .solution, .learn {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #2d2d2d; /* Charcoal */
+            border-radius: 10px;
+        }
 
-.stats {
-    display: flex;
-    justify-content: space-around;
-}
+        .stats {
+            display: flex;
+            justify-content: space-around;
+        }
 
-.stat h3 {
-    font-size: 2rem;
-    color: #b71c1c; /* Deep Crimson */
-    margin: 0;
-}
+        .stat h3 {
+            font-size: 2rem;
+            color: #b71c1c; /* Deep Crimson */
+            margin: 0;
+        }
 
-.stat p {
-    margin: 5px 0;
-    color: #e5e5e5; /* Platinum */
-}
+        .stat p {
+            margin: 5px 0;
+            color: #e5e5e5; /* Platinum */
+        }
 
-.content p, .solution p, .learn p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
+        .content p, .solution p, .learn p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
 
-li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    color: #ffffff; /* White */
-}
+        li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #ffffff; /* White */
+        }
 
-.cta-button {
-    background-color: #b71c1c; /* Deep Crimson */
-    color: #ffffff; /* White */
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
+        .cta-button {
+            background-color: #b71c1c; /* Deep Crimson */
+            color: #ffffff; /* White */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
 
-.cta-button:hover {
-    background-color: #8f1616; /* Darker Crimson */
-}
+        .cta-button:hover {
+            background-color: #8f1616; /* Darker Crimson */
+        }
 
-.footer {
-    margin-top: 40px;
-    color: #e5e5e5; /* Platinum */
-}
+        .footer {
+            margin-top: 40px;
+            color: #e5e5e5; /* Platinum */
+        }
 
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-}
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
 
-.modal-content {
-    background-color: #0a0a0a; /* Almost Black */
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #e5e5e5; /* Platinum */
-    width: 80%;
-    max-width: 700px;
-    border-radius: 10px;
-}
+        .modal-content {
+            background-color: #0a0a0a; /* Almost Black */
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #e5e5e5; /* Platinum */
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+        }
 
-.close-button {
-    color: #ffffff; /* White */
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+        .close-button {
+            color: #ffffff; /* White */
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-.close-button:hover,
-.close-button:focus {
-    color: #b71c1c; /* Deep Crimson */
-    text-decoration: none;
-    cursor: pointer;
-}
+        .close-button:hover,
+        .close-button:focus {
+            color: #b71c1c; /* Deep Crimson */
+            text-decoration: none;
+            cursor: pointer;
+        }
 
-@media (max-width: 768px) {
-    .stats {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.2rem;
-    }
-}
-   
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <!-- Hero Section -->
