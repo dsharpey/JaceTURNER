@@ -1,4 +1,3 @@
-
 :root {
     --primary: #b71c1c;      /* Deep Crimson */
     --secondary: #2d2d2d;    /* Charcoal */
@@ -26,21 +25,25 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: var(--primary);
 }
 
 h2 {
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--accent);
     margin-bottom: 40px;
+}
+
+.stats, .content, .solution, .learn {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: 10px;
 }
 
 .stats {
     display: flex;
     justify-content: space-around;
-    margin: 40px 0;
-    padding: 20px;
-    background-color: var(--secondary);
-    border-radius: 10px;
 }
 
 .stat h3 {
@@ -54,18 +57,9 @@ h2 {
     color: var(--accent);
 }
 
-.content {
-    text-align: left;
-    margin: 40px 0;
-}
-
-.content p {
+.content p, .solution p, .learn p {
     font-size: 1.2rem;
     margin: 10px 0;
-}
-
-.solution, .learn {
-    margin: 30px 0;
 }
 
 ul {
@@ -77,11 +71,23 @@ ul {
 li {
     margin: 10px 0;
     font-size: 1.1rem;
+    color: var(--text);
 }
 
-iframe {
-    max-width: 100%;
-    margin-top: 40px;
+.cta-button {
+    background-color: var(--primary);
+    color: var(--text);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #8f1616;
 }
 
 .footer {
@@ -103,77 +109,100 @@ iframe {
         font-size: 1.2rem;
     }
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lock-In Method | Jace Turner</title>
+    <title>Time Is Your Weapon | Jace Turner</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Transform Your Life With The Lock-In Method</h1>
+        <!-- Hero Section -->
+        <h1>Time Is Your Weapon: The Guide to Unstoppable Discipline</h1>
         <h2>A No-BS Guide to Building an Unshakeable Mind & Body</h2>
-        
-        <div class="stats">
-            <div class="stat">
-                <h3>3.5K+</h3>
-                <p>Subscribers Strong</p>
-            </div>
-            <div class="stat">
-                <h3>26+</h3>
-                <p>Value-Packed Videos</p>
-            </div>
-            <div class="stat">
-                <h3>500+</h3>
-                <p>Growing Community</p>
-            </div>
-        </div>
+        <a href="#form" class="cta-button">Get Your Free Copy</a>
 
+        <!-- If You're Tired Of Section -->
         <div class="content">
-            <p>You've tried to change before.</p>
-            <p>Monday comes, you're motivated.</p>
-            <p>By Wednesday, you're back to your old habits.</p>
-            <p>The cycle continues...</p>
-
-            <div class="solution">
-                <p>The Lock-In Method isn't another motivational guide.</p>
-                <p>It's a battle-tested system for building:</p>
-                <ul>
-                    <li>Unstoppable Discipline</li>
-                    <li>Real Physical Strength</li>
-                    <li>Unshakeable Mindset</li>
-                    <li>Time Mastery</li>
-                    <li>Lasting Habits</li>
-                </ul>
-            </div>
-
-            <div class="learn">
-                <p>You'll Learn:</p>
-                <ul>
-                    <li>→ Why your past attempts at change have failed</li>
-                    <li>→ How to weaponize time for maximum results</li>
-                    <li>→ The exact morning routine that guarantees success</li>
-                    <li>→ How to build real confidence through action</li>
-                    <li>→ The foundation of lasting physical transformation</li>
-                    <li>→ Systems that make success automatic</li>
-                </ul>
-            </div>
+            <h2>If You're Tired Of...</h2>
+            <ul>
+                <li>Starting over every Monday</li>
+                <li>Motivation videos that lead nowhere</li>
+                <li>Feeling stuck while time passes by</li>
+            </ul>
         </div>
 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform?embedded=true" 
-            width="640" 
-            height="600" 
-            frameborder="0" 
-            marginheight="0" 
-            marginwidth="0">
-            Loading…
-        </iframe>
+        <!-- Problem Section -->
+        <div class="content">
+            <h2>Sound Familiar?</h2>
+            <ul>
+                <li>Struggling to maintain discipline</li>
+                <li>Lacking a clear path to success</li>
+                <li>Feeling overwhelmed by distractions</li>
+            </ul>
+        </div>
 
+        <!-- Solution Section -->
+        <div class="solution">
+            <h2>Time Is Your Weapon: Your Path to Real Change</h2>
+            <p>This isn't another motivational guide. It's a battle-tested system for building unstoppable discipline, real physical strength, and an unshakeable mindset.</p>
+        </div>
+
+        <!-- Who This Is For Section -->
+        <div class="content">
+            <h2>Who This Guide Is For:</h2>
+            <ul>
+                <li>Young men ready to take control of their lives</li>
+                <li>Anyone seeking real, lasting transformation</li>
+                <li>Individuals tired of temporary fixes</li>
+            </ul>
+        </div>
+
+        <!-- What You'll Learn Section -->
+        <div class="learn">
+            <h2>Inside This Guide, You'll Discover:</h2>
+            <ul>
+                <li>How to weaponize time for maximum results</li>
+                <li>The exact morning routine that guarantees success</li>
+                <li>Systems that make success automatic</li>
+            </ul>
+        </div>
+
+        <!-- Call to Action Section -->
+        <h2>Ready to Transform Your Life?</h2>
+        <a href="#form" class="cta-button">Download Your Free Guide Now</a>
+
+        <!-- Form Section -->
+        <div id="form" class="content">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform?embedded=true" 
+                width="640" 
+                height="600" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+                Loading…
+            </iframe>
+        </div>
+
+        <!-- Footer Section -->
         <p class="footer">Join the growing community of men who are done with excuses and ready for real change.</p>
+        <div class="footer">
+            <a href="https://www.youtube.com/@Jace_Turner" target="_blank">YouTube</a> | 
+            <a href="https://www.instagram.com/jaceturner_coaching" target="_blank">Instagram</a>
+        </div>
     </div>
+ <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
