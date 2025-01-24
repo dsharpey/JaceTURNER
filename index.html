@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
-            background-color: #0a0a0a;
+            background-color: #0b0b0b;
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -32,7 +32,7 @@
             margin-bottom: 20px;
             font-weight: 700;
             line-height: 1.2;
-            color: #b71c1c;
+            color: #004d40;
         }
 
         h2 {
@@ -58,15 +58,15 @@
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 10px;
-            color: #b71c1c;
+            color: #cd7f32;
         }
 
         .stat p {
-            color: #e5e5e5;
+            color: #e0f2f1;
         }
 
         .container-dark {
-            background-color: #2d2d2d;
+            background-color: #333333;
             border-radius: 10px;
             padding: 30px;
             margin: 20px 0 40px 0;
@@ -79,12 +79,12 @@
         .list-item {
             font-size: 24px;
             margin: 20px 0;
-            color: #e5e5e5;
+            color: #e0f2f1;
         }
 
         .cta-button {
             display: inline-block;
-            background-color: #b71c1c;
+            background-color: #004d40;
             color: #ffffff;
             padding: 20px 50px;
             font-size: 24px;
@@ -98,18 +98,18 @@
         }
 
         .cta-button:hover {
-            background-color: #8f1616;
+            background-color: #00695c;
             transform: translateY(-2px);
         }
 
         .footer {
             text-align: center;
             margin-top: 100px;
-            color: #e5e5e5;
+            color: #e0f2f1;
         }
 
         .footer a {
-            color: #b71c1c;
+            color: #cd7f32;
             text-decoration: none;
             margin: 0 15px;
             transition: opacity 0.3s;
@@ -117,6 +117,46 @@
 
         .footer a:hover {
             opacity: 0.8;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            position: relative;
+            background: #0b0b0b;
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid #333333;
+        }
+
+        .close-button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 30px;
+            color: #ffffff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .close-button:hover {
+            color: #cd7f32;
         }
 
         @media (max-width: 768px) {
@@ -151,6 +191,11 @@
             }
 
             .container-dark {
+                padding: 20px;
+            }
+
+            .modal-content {
+                margin: 20px auto;
                 padding: 20px;
             }
         }
@@ -225,6 +270,21 @@
             <button class="cta-button" id="openModal">Get Your Free Copy Now</button>
         </div>
 
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <button class="close-button" id="closeModal">&times;</button>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform?embedded=true" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+
         <div class="footer">
             <p>Join the growing community of men who are done with excuses and ready for real change.</p>
             <div>
@@ -235,8 +295,25 @@
     </div>
 
     <script>
-        document.getElementById('openModal').addEventListener('click', function() {
-            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdA7X1zw2RXFQtefpRFX-ADVVNH6_3sVH-7tcw3ZX5cfw85fA/viewform';
+        const modal = document.getElementById('modal');
+        const openModalButton = document.getElementById('openModal');
+        const closeModalButton = document.getElementById('closeModal');
+
+        openModalButton.addEventListener('click', () => {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
