@@ -6,269 +6,276 @@
     <title>Time Is Your Weapon | Jace Turner</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-body {
-    background-color: #141414;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    min-height: 100vh;
-}
+        body {
+            background-color: #141414;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 120px 20px;
-}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px;
+        }
 
-.hero {
-    text-align: center;
-    margin-bottom: 80px;
-}
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+        }
 
-h1 {
-    font-size: 56px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #ffffff;
-}
+        h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #ffffff;
+        }
 
-h2 {
-    font-size: 28px;
-    color: #c8a45d;
-    margin-bottom: 30px;
-    font-weight: 400;
-}
+        h2 {
+            font-size: 28px;
+            color: #c8a45d;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
 
-.stats {
-    display: flex;
-    justify-content: space-between;
-    margin: 80px 0;
-    text-align: center;
-    gap: 40px;
-}
+        .testimonials {
+            margin: 80px 0;
+            text-align: center;
+        }
 
-.stat {
-    flex: 1;
-}
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
 
-.stat-number {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #c8a45d;
-}
+        .testimonial-card {
+            background-color: #1c1c1c;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+        }
 
-.stat p {
-    color: #f5f5f5;
-}
+        .testimonial-text {
+            color: #f5f5f5;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
 
-.container-dark {
-    background-color: #1c1c1c;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 20px 0 40px 0;
-}
+        .testimonial-author {
+            color: #c8a45d;
+            font-weight: 600;
+        }
 
-.content-section {
-    margin: 60px 0;
-}
+        .testimonial-cta {
+            margin-top: 40px;
+        }
 
-.list-item {
-    font-size: 24px;
-    margin: 20px 0;
-    color: #f5f5f5;
-}
+        .testimonial-cta p {
+            color: #f5f5f5;
+            margin-bottom: 20px;
+        }
 
-.cta-button {
-    display: inline-block;
-    background-color: #c8a45d;
-    color: #141414;
-    padding: 20px 50px;
-    font-size: 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    margin: 30px 0;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
+        .container-dark {
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0 40px 0;
+        }
 
-.cta-button:hover {
-    background-color: #d4b06b;
-    transform: translateY(-2px);
-}
+        .content-section {
+            margin: 60px 0;
+        }
 
-.footer {
-    text-align: center;
-    margin-top: 100px;
-    color: #f5f5f5;
-}
+        .list-item {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #f5f5f5;
+        }
 
-.footer a {
-    color: #c8a45d;
-    text-decoration: none;
-    margin: 0 15px;
-    transition: opacity 0.3s;
-}
+        .cta-button {
+            display: inline-block;
+            background-color: #c8a45d;
+            color: #141414;
+            padding: 20px 50px;
+            font-size: 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
 
-.footer a:hover {
-    opacity: 0.8;
-}
+        .cta-button:hover {
+            background-color: #d4b06b;
+            transform: translateY(-2px);
+        }
 
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    overflow-y: auto;
-}
+        .footer {
+            text-align: center;
+            margin-top: 100px;
+            color: #f5f5f5;
+        }
 
-.modal-content {
-    position: relative;
-    background: #1c1c1c;
-    width: 90%;
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 10px;
-}
+        .footer a {
+            color: #c8a45d;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s;
+        }
 
-.modal-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
+        .footer a:hover {
+            opacity: 0.8;
+        }
 
-.modal-header h3 {
-    color: #ffffff;
-    font-size: 24px;
-    margin: 0;
-}
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+        }
 
-.close-button {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 24px;
-    color: #f5f5f5;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    transition: color 0.3s ease;
-}
+        .modal-content {
+            position: relative;
+            background: #1c1c1c;
+            width: 90%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 10px;
+        }
 
-.close-button:hover {
-    color: #c8a45d;
-}
+        .modal-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-.form-group {
-    margin-bottom: 20px;
-}
+        .modal-header h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0;
+        }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #f5f5f5;
-}
+        .close-button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 24px;
+            color: #f5f5f5;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            transition: color 0.3s ease;
+        }
 
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #333333;
-    border-radius: 5px;
-    background: #141414;
-    color: #ffffff;
-    font-size: 16px;
-}
+        .close-button:hover {
+            color: #c8a45d;
+        }
 
-.form-group input:focus {
-    outline: none;
-    border-color: #c8a45d;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.submit-button {
-    width: 100%;
-    padding: 15px;
-    background: #c8a45d;
-    color: #141414;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #f5f5f5;
+        }
 
-.submit-button:hover {
-    background-color: #d4b06b;
-}
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #333333;
+            border-radius: 5px;
+            background: #141414;
+            color: #ffffff;
+            font-size: 16px;
+        }
 
-.privacy-notice {
-    text-align: center;
-    color: #f5f5f5;
-    font-size: 14px;
-    margin-top: 20px;
-}
+        .form-group input:focus {
+            outline: none;
+            border-color: #c8a45d;
+        }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 60px 20px;
-    }
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            background: #c8a45d;
+            color: #141414;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-    h1 {
-        font-size: 36px;
-    }
+        .submit-button:hover {
+            background-color: #d4b06b;
+        }
 
-    h2 {
-        font-size: 20px;
-    }
+        .privacy-notice {
+            text-align: center;
+            color: #f5f5f5;
+            font-size: 14px;
+            margin-top: 20px;
+        }
 
-    .stats {
-        flex-direction: column;
-    }
+        @media (max-width: 768px) {
+            .container {
+                padding: 60px 20px;
+            }
 
-    .stat {
-        margin: 20px 0;
-    }
+            h1 {
+                font-size: 36px;
+            }
 
-    .list-item {
-        font-size: 20px;
-    }
+            h2 {
+                font-size: 20px;
+            }
 
-    .cta-button {
-        font-size: 20px;
-        padding: 15px 40px;
-        width: 100%;
-    }
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-card {
+                padding: 20px;
+            }
 
-    .container-dark {
-        padding: 20px;
-    }
+            .list-item {
+                font-size: 20px;
+            }
 
-    .modal-content {
-        margin: 20px auto;
-        padding: 20px;
-    }
-}
-        </style> 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Is Your Weapon | Jace Turner</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        [Previous CSS here]
+            .cta-button {
+                font-size: 20px;
+                padding: 15px 40px;
+                width: 100%;
+            }
+
+            .container-dark {
+                padding: 20px;
+            }
+
+            .modal-content {
+                margin: 20px auto;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -279,18 +286,27 @@ h2 {
             <button class="cta-button" id="openModal">Get Your Free Copy Now</button>
         </div>
 
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">3.5K+</div>
-                <p>Subscribers Strong</p>
+        <div class="testimonials">
+            <h2>Here's what some of my subscribers are saying:</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Bro I genuinely appreciate this channel so much. You explain it so well, this channel has kept me motivated in this new year to keep everything going, bounce back from failures."</p>
+                    <p class="testimonial-author">@shentoshrin</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Thanks man, your content which you making for us worth a lot."</p>
+                    <p class="testimonial-author">@waitexow</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I started watching you a few days ago, and I am obsessed your motivation and inspiration is next level! Thanks!"</p>
+                    <p class="testimonial-author">@josephgreenfeld8202</p>
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-number">26+</div>
-                <p>Value-Packed Videos</p>
-            </div>
-            <div class="stat">
-                <div class="stat-number">500+</div>
-                <p>Growing Community</p>
+            <div class="testimonial-cta">
+                <p>There are TONS more for you to check out</p>
+                <a href="https://www.youtube.com/@Jace_Turner" class="cta-button" target="_blank">Visit YouTube Channel</a>
             </div>
         </div>
 
@@ -298,7 +314,7 @@ h2 {
             <h2>If You're Tired Of...</h2>
             <div class="container-dark">
                 <div class="list-item">🔄 Starting over every Monday</div>
-                <div class="list-item">📱 Watching motivational content instead of taking action</div>
+                <div class="list-item">📱 Endless motivation videos with zero results</div>
                 <div class="list-item">⏰ Feeling stuck while time passes by</div>
             </div>
         </div>
@@ -322,7 +338,7 @@ h2 {
         <div class="content-section">
             <h2>Who This Guide Is For:</h2>
             <div class="container-dark">
-                <div class="list-item">💪 Men ready to take control of their lives</div>
+                <div class="list-item">💪 Young men ready to take control of their lives</div>
                 <div class="list-item">🎯 Anyone seeking real, lasting transformation</div>
                 <div class="list-item">⚡ Individuals tired of temporary fixes</div>
             </div>
@@ -332,7 +348,7 @@ h2 {
             <h2>Inside This Guide, You'll Discover:</h2>
             <div class="container-dark">
                 <div class="list-item">⚔️ How to weaponize time for maximum results</div>
-                <div class="list-item">🌅 The early hours blueprint that separates winners from watchers</div>
+                <div class="list-item">🌅 🌅 The early hours blueprint that separates winners from watchers</div>
                 <div class="list-item">🔄 Systems that make success automatic</div>
             </div>
         </div>
