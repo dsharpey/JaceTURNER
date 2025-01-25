@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
-            background-color: #0b0b0b;
+            background-color: #0a0a0a;
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -32,7 +32,7 @@
             margin-bottom: 20px;
             font-weight: 700;
             line-height: 1.2;
-            color: #004d40;
+            color: #1a237e;
         }
 
         h2 {
@@ -58,15 +58,15 @@
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 10px;
-            color: #cd7f32;
+            color: #4fc3f7;
         }
 
         .stat p {
-            color: #e0f2f1;
+            color: #e8eaf6;
         }
 
         .container-dark {
-            background-color: #333333;
+            background-color: #1e1e1e;
             border-radius: 10px;
             padding: 30px;
             margin: 20px 0 40px 0;
@@ -79,18 +79,18 @@
         .list-item {
             font-size: 24px;
             margin: 20px 0;
-            color: #e0f2f1;
+            color: #e8eaf6;
         }
 
         .cta-button {
             display: inline-block;
-            background-color: #004d40;
-            color: #ffffff;
+            background-color: #4fc3f7;
+            color: #1a237e;
             padding: 20px 50px;
             font-size: 24px;
             text-decoration: none;
             border-radius: 8px;
-            margin: 60px 0;
+            margin: 30px 0;
             border: none;
             cursor: pointer;
             transition: transform 0.3s;
@@ -98,18 +98,18 @@
         }
 
         .cta-button:hover {
-            background-color: #00695c;
+            background-color: #81d4fa;
             transform: translateY(-2px);
         }
 
         .footer {
             text-align: center;
             margin-top: 100px;
-            color: #e0f2f1;
+            color: #e8eaf6;
         }
 
         .footer a {
-            color: #cd7f32;
+            color: #4fc3f7;
             text-decoration: none;
             margin: 0 15px;
             transition: opacity 0.3s;
@@ -134,13 +134,13 @@
 
         .modal-content {
             position: relative;
-            background: #0b0b0b;
+            background: #0a0a0a;
             width: 90%;
             max-width: 600px;
             margin: 50px auto;
             padding: 40px;
             border-radius: 10px;
-            border: 1px solid #333333;
+            border: 1px solid #1e1e1e;
         }
 
         .close-button {
@@ -156,7 +156,7 @@
         }
 
         .close-button:hover {
-            color: #cd7f32;
+            color: #4fc3f7;
         }
 
         @media (max-width: 768px) {
@@ -206,6 +206,7 @@
         <div class="hero">
             <h1>Time Is Your Weapon: The Guide to Unstoppable Discipline</h1>
             <h2>A No-BS Guide to Building an Unshakeable Mind & Body</h2>
+            <button class="cta-button" id="openModal">Get Your Free Copy Now</button>
         </div>
 
         <div class="stats">
@@ -296,12 +297,14 @@
 
     <script>
         const modal = document.getElementById('modal');
-        const openModalButton = document.getElementById('openModal');
+        const openModalButtons = document.querySelectorAll('#openModal');
         const closeModalButton = document.getElementById('closeModal');
 
-        openModalButton.addEventListener('click', () => {
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
         });
 
         closeModalButton.addEventListener('click', () => {
