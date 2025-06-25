@@ -2,7 +2,7 @@
 <html lang="en"> 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200, initial-scale=0.5, user-scalable=yes">
     <title>Time Is Your Weapon | Jace Turner</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
@@ -240,6 +240,14 @@
             font-size: 14px;
             margin-top: 20px;
         }
+
+        @media screen and (max-width: 768px) {
+    body {
+        transform: scale(0.6);
+        transform-origin: top left;
+        width: 167%; /* Compensate for scaling */
+    }
+}
 
         @media (max-width: 768px) {
             .container {
