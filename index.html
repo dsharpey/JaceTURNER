@@ -241,10 +241,16 @@
             margin-top: 20px;
         }
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     html {
-        transform: 0.7; 
+        zoom: 0.7;
     }
+    
+    body {
+        transform-origin: center top;
+        margin: 0 auto;
+    }
+}
     </style>
 </head>
 <body>
